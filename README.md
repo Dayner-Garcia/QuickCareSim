@@ -41,11 +41,6 @@ El proyecto está dividido en capas siguiendo la arquitectura Onion:
 
 ---
 
-## 📸 Vista Previa (opcional)
-
-> Puedes agregar aquí capturas de pantalla del sistema si deseas.
-
----
 
 ## 🚀 Cómo ejecutar el proyecto
 
