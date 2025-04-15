@@ -1,0 +1,3 @@
+# 01 - Resumen del Proyecto
+
+Este proyecto simula un sistema de atención en una sala de urgencias médicaa....

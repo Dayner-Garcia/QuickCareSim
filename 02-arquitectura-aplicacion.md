@@ -1,0 +1,1 @@
+# Descrip de la estructura (Core, Infra, WebApp)

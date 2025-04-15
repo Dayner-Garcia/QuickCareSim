@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\QuickCareSim.Presentation.WebApp.props" />
+</Project>

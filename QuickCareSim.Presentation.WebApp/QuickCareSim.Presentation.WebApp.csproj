@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QuickCareSim.Application\QuickCareSim.Application.csproj" />
+    <ProjectReference Include="..\QuickCareSim.Infrastructure.Identity\QuickCareSim.Infrastructure.Identity.csproj" />
+    <ProjectReference Include="..\QuickCareSim.Infrastructure.Persistance\QuickCareSim.Infrastructure.Persistance.csproj" />
+  </ItemGroup>
+
+</Project>

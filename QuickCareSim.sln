@@ -1,0 +1,124 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{400C723A-F8F6-411A-8CE1-9D77822B8BD2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{F416EF0B-7113-4FC1-A4F8-D4CB61BA27CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{4B060D56-21B5-43A1-B7BA-47FC7CCFDB06}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{1C51BE70-1523-46EA-9D01-2D902B099802}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{5A6F1E4B-427F-45F7-8D31-609C5212A2E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickCareSim.Application", "QuickCareSim.Application\QuickCareSim.Application.csproj", "{8E587D8D-D889-4C9B-8E44-5500C1E444D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{AA6A581A-546A-47A8-B2F6-02306285CDD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickCareSim.Domain", "QuickCareSim.Domain\QuickCareSim.Domain.csproj", "{A027565F-E3DA-4B84-8F22-532CB7D6E18E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{DE5020F4-84B5-4858-85BB-571D1EDFC8DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickCareSim.Infrastructure.Identity", "QuickCareSim.Infrastructure.Identity\QuickCareSim.Infrastructure.Identity.csproj", "{C7B46796-3633-4683-B5DD-1D501F2E1BE1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistance", "Persistance", "{7DE9D672-CF02-48D1-8DB3-3F4A0E4561C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickCareSim.Infrastructure.Persistance", "QuickCareSim.Infrastructure.Persistance\QuickCareSim.Infrastructure.Persistance.csproj", "{4A24F728-EA1A-43C0-9F42-C61CFAA05662}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickCareSim.Presentation.WebApp", "QuickCareSim.Presentation.WebApp\QuickCareSim.Presentation.WebApp.csproj", "{C28E3D93-9DDC-4D35-A106-DF408545E65E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{CD79E868-D2CC-4914-B857-62E3E9364897}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickCareSim.Infrastructure.Tests", "QuickCareSim.Infrastructure.Tests\QuickCareSim.Infrastructure.Tests.csproj", "{77B7DF1A-383E-4092-AF99-52A5F889425A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{5F5CA914-9A83-4EAB-AF16-B6453B5C3628}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickCareSim.Application.Tests", "QuickCareSim.Application.Tests\QuickCareSim.Application.Tests.csproj", "{6094B36D-30A0-4532-AF73-1BAED669FA7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{745C70BD-90A1-47E5-8C4E-F31BF98C1A42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickCareSim.Infrastructure.Shared", "QuickCareSim.Infrastructure.Shared\QuickCareSim.Infrastructure.Shared.csproj", "{12869EE3-FB57-496C-8B8F-BE45CEB9E789}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{2F1915F4-B141-42C8-847A-5CAFD44297C2}"
+	ProjectSection(SolutionItems) = preProject
+		01-resumen-proyecto.md = 01-resumen-proyecto.md
+		02-arquitectura-aplicacion.md = 02-arquitectura-aplicacion.md
+		03-estructura-entidades.md = 03-estructura-entidades.md
+		04-simulacion-y-estrategias.md = 04-simulacion-y-estrategias.md
+		05-ejecucion-y-pruebas.md = 05-ejecucion-y-pruebas.md
+		06-conclusiones.md = 06-conclusiones.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Metrics", "Metrics", "{CBEF8B5A-7DA1-4ADB-8E77-FA179766ACE1}"
+	ProjectSection(SolutionItems) = preProject
+		comparativa-strategies.xlsx = comparativa-strategies.xlsx
+		tiempo-promedio-doctores.csv = tiempo-promedio-doctores.csv
+		tiempos-espera-por-urgencia.csv = tiempos-espera-por-urgencia.csv
+		xplicacion-metricas.md = xplicacion-metricas.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E587D8D-D889-4C9B-8E44-5500C1E444D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E587D8D-D889-4C9B-8E44-5500C1E444D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E587D8D-D889-4C9B-8E44-5500C1E444D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E587D8D-D889-4C9B-8E44-5500C1E444D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A027565F-E3DA-4B84-8F22-532CB7D6E18E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A027565F-E3DA-4B84-8F22-532CB7D6E18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A027565F-E3DA-4B84-8F22-532CB7D6E18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A027565F-E3DA-4B84-8F22-532CB7D6E18E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7B46796-3633-4683-B5DD-1D501F2E1BE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7B46796-3633-4683-B5DD-1D501F2E1BE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7B46796-3633-4683-B5DD-1D501F2E1BE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7B46796-3633-4683-B5DD-1D501F2E1BE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A24F728-EA1A-43C0-9F42-C61CFAA05662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A24F728-EA1A-43C0-9F42-C61CFAA05662}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A24F728-EA1A-43C0-9F42-C61CFAA05662}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A24F728-EA1A-43C0-9F42-C61CFAA05662}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C28E3D93-9DDC-4D35-A106-DF408545E65E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C28E3D93-9DDC-4D35-A106-DF408545E65E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C28E3D93-9DDC-4D35-A106-DF408545E65E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C28E3D93-9DDC-4D35-A106-DF408545E65E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77B7DF1A-383E-4092-AF99-52A5F889425A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77B7DF1A-383E-4092-AF99-52A5F889425A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77B7DF1A-383E-4092-AF99-52A5F889425A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77B7DF1A-383E-4092-AF99-52A5F889425A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6094B36D-30A0-4532-AF73-1BAED669FA7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6094B36D-30A0-4532-AF73-1BAED669FA7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6094B36D-30A0-4532-AF73-1BAED669FA7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6094B36D-30A0-4532-AF73-1BAED669FA7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12869EE3-FB57-496C-8B8F-BE45CEB9E789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12869EE3-FB57-496C-8B8F-BE45CEB9E789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12869EE3-FB57-496C-8B8F-BE45CEB9E789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12869EE3-FB57-496C-8B8F-BE45CEB9E789}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F416EF0B-7113-4FC1-A4F8-D4CB61BA27CD} = {400C723A-F8F6-411A-8CE1-9D77822B8BD2}
+		{4B060D56-21B5-43A1-B7BA-47FC7CCFDB06} = {400C723A-F8F6-411A-8CE1-9D77822B8BD2}
+		{1C51BE70-1523-46EA-9D01-2D902B099802} = {400C723A-F8F6-411A-8CE1-9D77822B8BD2}
+		{5A6F1E4B-427F-45F7-8D31-609C5212A2E4} = {F416EF0B-7113-4FC1-A4F8-D4CB61BA27CD}
+		{8E587D8D-D889-4C9B-8E44-5500C1E444D0} = {5A6F1E4B-427F-45F7-8D31-609C5212A2E4}
+		{AA6A581A-546A-47A8-B2F6-02306285CDD8} = {F416EF0B-7113-4FC1-A4F8-D4CB61BA27CD}
+		{A027565F-E3DA-4B84-8F22-532CB7D6E18E} = {AA6A581A-546A-47A8-B2F6-02306285CDD8}
+		{DE5020F4-84B5-4858-85BB-571D1EDFC8DE} = {4B060D56-21B5-43A1-B7BA-47FC7CCFDB06}
+		{C7B46796-3633-4683-B5DD-1D501F2E1BE1} = {DE5020F4-84B5-4858-85BB-571D1EDFC8DE}
+		{7DE9D672-CF02-48D1-8DB3-3F4A0E4561C4} = {4B060D56-21B5-43A1-B7BA-47FC7CCFDB06}
+		{4A24F728-EA1A-43C0-9F42-C61CFAA05662} = {7DE9D672-CF02-48D1-8DB3-3F4A0E4561C4}
+		{C28E3D93-9DDC-4D35-A106-DF408545E65E} = {1C51BE70-1523-46EA-9D01-2D902B099802}
+		{CD79E868-D2CC-4914-B857-62E3E9364897} = {4B060D56-21B5-43A1-B7BA-47FC7CCFDB06}
+		{77B7DF1A-383E-4092-AF99-52A5F889425A} = {CD79E868-D2CC-4914-B857-62E3E9364897}
+		{5F5CA914-9A83-4EAB-AF16-B6453B5C3628} = {5A6F1E4B-427F-45F7-8D31-609C5212A2E4}
+		{6094B36D-30A0-4532-AF73-1BAED669FA7E} = {5F5CA914-9A83-4EAB-AF16-B6453B5C3628}
+		{745C70BD-90A1-47E5-8C4E-F31BF98C1A42} = {4B060D56-21B5-43A1-B7BA-47FC7CCFDB06}
+		{12869EE3-FB57-496C-8B8F-BE45CEB9E789} = {745C70BD-90A1-47E5-8C4E-F31BF98C1A42}
+	EndGlobalSection
+EndGlobal

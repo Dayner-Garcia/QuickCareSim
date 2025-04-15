@@ -1,0 +1,181 @@
+﻿@model QuickCareSim.Application.ViewModels.Auth.RegisterViewModel
+
+@{
+    Layout = null;
+    ViewData["Title"] = "Registro";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro - ClothingCo</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #c6ffdd, #fbd786, #f7797d);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .register-card {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2e7d32;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-control, .form-select {
+            border-radius: 12px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            transition: box-shadow 0.2s ease-in-out;
+        }
+
+        .form-control:focus, .form-select:focus {
+            box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.3);
+        }
+
+        .btn-register {
+            width: 100%;
+            background-color: #2e7d32;
+            border: none;
+            padding: 12px;
+            color: white;
+            font-weight: bold;
+            border-radius: 12px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-register:hover {
+            background-color: #1b5e20;
+        }
+
+        .footer-text {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.95rem;
+            color: #333;
+        }
+
+        .footer-text a {
+            color: #2e7d32;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer-text a:hover {
+            text-decoration: underline;
+        }
+
+        .alert, .text-danger {
+            font-size: 0.95rem;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-card">
+        <h2><i class="fas fa-user-plus"></i> Crea tu Cuenta</h2>
+
+        <form asp-action="Register" method="post" enctype="multipart/form-data">
+            @Html.AntiForgeryToken()
+
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="Name">Nombre</label>
+                    <input type="text" id="Name" name="Name" class="form-control" value="@Model.Name" placeholder="Ingresa tu nombre" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label for="LastName">Apellido</label>
+                    <input type="text" id="LastName" name="LastName" class="form-control" value="@Model.LastName" placeholder="Ingresa tu apellido" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="PhoneNumber">Teléfono</label>
+                    <input type="tel" id="PhoneNumber" name="PhoneNumber" class="form-control" value="@Model.PhoneNumber" placeholder="Ingresa tu teléfono" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label for="UserName">Nombre de Usuario</label>
+                    <input type="text" id="UserName" name="Username" class="form-control" value="@Model.UserName" placeholder="Elige tu nombre de usuario" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="Email">Correo Electrónico</label>
+                    <input type="email" id="Email" name="Email" class="form-control" value="@Model.Email" placeholder="Ingresa tu correo" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label for="Password">Contraseña</label>
+                    <input type="password" id="Password" name="Password" class="form-control" placeholder="Ingresa tu contraseña" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="RepeatPassword">Confirmar Contraseña</label>
+                    <input type="password" id="RepeatPassword" name="RepeatPassword" class="form-control" placeholder="Confirma tu contraseña" />
+                    <span asp-validation-for="RepeatPassword" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label for="Role">Tipo de Usuario</label>
+                    <select id="Role" name="Role" class="form-select" required>
+                        <option value="CLIENT">Cliente</option>
+                        <option value="DOCTOR">Doctor</option>
+                        <option value="PATIENT">Paciente</option>
+                        <option value="ASISTANT">Asistente</option>
+                        <option value="SECRETARY">Secretario/a</option>
+                    </select>
+                    <span asp-validation-for="Role" class="text-danger"></span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-register mt-3">
+                <i class="fas fa-check-circle"></i> Registrarme
+            </button>
+
+            <div class="footer-text mt-4">
+                ¿Ya tienes cuenta? <a href="/Auth/Login">Inicia Sesión</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a2d9a66a2a.js" crossorigin="anonymous"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

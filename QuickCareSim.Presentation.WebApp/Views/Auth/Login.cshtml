@@ -1,0 +1,164 @@
+﻿@{
+    Layout = null;
+}
+@model QuickCareSim.Application.ViewModels.Auth.LoginViewModel
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - QuickCareSim</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #c6ffdd, #fbd786, #f7797d);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .login-card {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            padding: 40px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+        }
+
+            .login-card h2 {
+                text-align: center;
+                color: #2e7d32;
+                margin-bottom: 30px;
+                font-weight: bold;
+            }
+
+        label {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .form-control {
+            border-radius: 12px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            transition: box-shadow 0.2s ease-in-out;
+        }
+
+            .form-control:focus {
+                box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.3);
+            }
+
+        .btn-login {
+            width: 100%;
+            background-color: #2e7d32;
+            border: none;
+            padding: 12px;
+            color: white;
+            font-weight: bold;
+            border-radius: 12px;
+            transition: background-color 0.3s ease;
+        }
+
+            .btn-login:hover {
+                background-color: #1b5e20;
+            }
+
+        .footer-text {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.95rem;
+            color: #333;
+        }
+
+            .footer-text a {
+                color: #2e7d32;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+                .footer-text a:hover {
+                    text-decoration: underline;
+                }
+
+        .alert {
+            font-size: 0.95rem;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <h2>Iniciar Sesión</h2>
+
+        @if (TempData["SucessMessage"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["SucessMessage"]
+            </div>
+        }
+
+        @* ❌ Errores por TempData o ViewBag *@
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger">
+                @TempData["ErrorMessage"]
+            </div>
+        }
+
+        @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+        {
+            <div class="alert alert-danger">
+                @ViewBag.ErrorMessage
+            </div>
+        }
+
+        @if (!string.IsNullOrEmpty(ViewBag.Error))
+        {
+            <div class="alert alert-danger">
+                @ViewBag.Error
+            </div>
+        }
+
+
+
+        <form asp-action="Login" method="post">
+            @Html.AntiForgeryToken()
+
+            <div class="mb-3">
+                <label asp-for="Username">Correo o Usuario</label>
+                <input asp-for="Username" class="form-control" placeholder="ej. usuario@mail.com" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Password">Contraseña</label>
+                <input asp-for="Password" type="password" class="form-control" placeholder="••••••••" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <partial name="_ValidationScriptsPartial" />
+            <vc:ValidationSummary />
+
+
+
+            <button type="submit" class="btn-login">Iniciar Sesión</button>
+        </form>
+
+        <div class="footer-text">
+            ¿No tienes cuenta? <a href="@Url.Action("Register", "Auth")">Regístrate</a>
+        </div>
+    </div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

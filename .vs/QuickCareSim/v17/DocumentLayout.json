@@ -1,0 +1,202 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\QuickCareSim\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A027565F-E3DA-4B84-8F22-532CB7D6E18E}|QuickCareSim.Domain\\QuickCareSim.Domain.csproj|c:\\quickcaresim\\quickcaresim.domain\\entities\\simulationperformance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A027565F-E3DA-4B84-8F22-532CB7D6E18E}|QuickCareSim.Domain\\QuickCareSim.Domain.csproj|solutionrelative:quickcaresim.domain\\entities\\simulationperformance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A027565F-E3DA-4B84-8F22-532CB7D6E18E}|QuickCareSim.Domain\\QuickCareSim.Domain.csproj|c:\\quickcaresim\\quickcaresim.domain\\entities\\attentionlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A027565F-E3DA-4B84-8F22-532CB7D6E18E}|QuickCareSim.Domain\\QuickCareSim.Domain.csproj|solutionrelative:quickcaresim.domain\\entities\\attentionlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A027565F-E3DA-4B84-8F22-532CB7D6E18E}|QuickCareSim.Domain\\QuickCareSim.Domain.csproj|c:\\quickcaresim\\quickcaresim.domain\\enums\\strategytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A027565F-E3DA-4B84-8F22-532CB7D6E18E}|QuickCareSim.Domain\\QuickCareSim.Domain.csproj|solutionrelative:quickcaresim.domain\\enums\\strategytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A027565F-E3DA-4B84-8F22-532CB7D6E18E}|QuickCareSim.Domain\\QuickCareSim.Domain.csproj|c:\\quickcaresim\\quickcaresim.domain\\entities\\simulationrun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A027565F-E3DA-4B84-8F22-532CB7D6E18E}|QuickCareSim.Domain\\QuickCareSim.Domain.csproj|solutionrelative:quickcaresim.domain\\entities\\simulationrun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A027565F-E3DA-4B84-8F22-532CB7D6E18E}|QuickCareSim.Domain\\QuickCareSim.Domain.csproj|c:\\quickcaresim\\quickcaresim.domain\\entities\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A027565F-E3DA-4B84-8F22-532CB7D6E18E}|QuickCareSim.Domain\\QuickCareSim.Domain.csproj|solutionrelative:quickcaresim.domain\\entities\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A027565F-E3DA-4B84-8F22-532CB7D6E18E}|QuickCareSim.Domain\\QuickCareSim.Domain.csproj|c:\\quickcaresim\\quickcaresim.domain\\entities\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A027565F-E3DA-4B84-8F22-532CB7D6E18E}|QuickCareSim.Domain\\QuickCareSim.Domain.csproj|solutionrelative:quickcaresim.domain\\entities\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A027565F-E3DA-4B84-8F22-532CB7D6E18E}|QuickCareSim.Domain\\QuickCareSim.Domain.csproj|c:\\quickcaresim\\quickcaresim.domain\\entities\\performancemetric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A027565F-E3DA-4B84-8F22-532CB7D6E18E}|QuickCareSim.Domain\\QuickCareSim.Domain.csproj|solutionrelative:quickcaresim.domain\\entities\\performancemetric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A027565F-E3DA-4B84-8F22-532CB7D6E18E}|QuickCareSim.Domain\\QuickCareSim.Domain.csproj|c:\\quickcaresim\\quickcaresim.domain\\entities\\urgencywaitmetric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A027565F-E3DA-4B84-8F22-532CB7D6E18E}|QuickCareSim.Domain\\QuickCareSim.Domain.csproj|solutionrelative:quickcaresim.domain\\entities\\urgencywaitmetric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A24F728-EA1A-43C0-9F42-C61CFAA05662}|QuickCareSim.Infrastructure.Persistance\\QuickCareSim.Infrastructure.Persistance.csproj|c:\\quickcaresim\\quickcaresim.infrastructure.persistance\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A24F728-EA1A-43C0-9F42-C61CFAA05662}|QuickCareSim.Infrastructure.Persistance\\QuickCareSim.Infrastructure.Persistance.csproj|solutionrelative:quickcaresim.infrastructure.persistance\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 180,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\QuickCareSim\\QuickCareSim.Infrastructure.Persistance\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "QuickCareSim.Infrastructure.Persistance\\Context\\AppDbContext.cs",
+              "ToolTip": "C:\\QuickCareSim\\QuickCareSim.Infrastructure.Persistance\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "QuickCareSim.Infrastructure.Persistance\\Context\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T22:15:37.921Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UrgencyWaitMetric.cs",
+              "DocumentMoniker": "C:\\QuickCareSim\\QuickCareSim.Domain\\Entities\\UrgencyWaitMetric.cs",
+              "RelativeDocumentMoniker": "QuickCareSim.Domain\\Entities\\UrgencyWaitMetric.cs",
+              "ToolTip": "C:\\QuickCareSim\\QuickCareSim.Domain\\Entities\\UrgencyWaitMetric.cs",
+              "RelativeToolTip": "QuickCareSim.Domain\\Entities\\UrgencyWaitMetric.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T22:24:49.842Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PerformanceMetric.cs",
+              "DocumentMoniker": "C:\\QuickCareSim\\QuickCareSim.Domain\\Entities\\PerformanceMetric.cs",
+              "RelativeDocumentMoniker": "QuickCareSim.Domain\\Entities\\PerformanceMetric.cs",
+              "ToolTip": "C:\\QuickCareSim\\QuickCareSim.Domain\\Entities\\PerformanceMetric.cs",
+              "RelativeToolTip": "QuickCareSim.Domain\\Entities\\PerformanceMetric.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T22:15:08.536Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "C:\\QuickCareSim\\QuickCareSim.Domain\\Entities\\Doctor.cs",
+              "RelativeDocumentMoniker": "QuickCareSim.Domain\\Entities\\Doctor.cs",
+              "ToolTip": "C:\\QuickCareSim\\QuickCareSim.Domain\\Entities\\Doctor.cs",
+              "RelativeToolTip": "QuickCareSim.Domain\\Entities\\Doctor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T22:15:04.648Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "C:\\QuickCareSim\\QuickCareSim.Domain\\Entities\\Patient.cs",
+              "RelativeDocumentMoniker": "QuickCareSim.Domain\\Entities\\Patient.cs",
+              "ToolTip": "C:\\QuickCareSim\\QuickCareSim.Domain\\Entities\\Patient.cs",
+              "RelativeToolTip": "QuickCareSim.Domain\\Entities\\Patient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T22:14:15.382Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SimulationRun.cs",
+              "DocumentMoniker": "C:\\QuickCareSim\\QuickCareSim.Domain\\Entities\\SimulationRun.cs",
+              "RelativeDocumentMoniker": "QuickCareSim.Domain\\Entities\\SimulationRun.cs",
+              "ToolTip": "C:\\QuickCareSim\\QuickCareSim.Domain\\Entities\\SimulationRun.cs",
+              "RelativeToolTip": "QuickCareSim.Domain\\Entities\\SimulationRun.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T22:26:18.524Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StrategyType.cs",
+              "DocumentMoniker": "C:\\QuickCareSim\\QuickCareSim.Domain\\Enums\\StrategyType.cs",
+              "RelativeDocumentMoniker": "QuickCareSim.Domain\\Enums\\StrategyType.cs",
+              "ToolTip": "C:\\QuickCareSim\\QuickCareSim.Domain\\Enums\\StrategyType.cs",
+              "RelativeToolTip": "QuickCareSim.Domain\\Enums\\StrategyType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T22:25:49.123Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AttentionLog.cs",
+              "DocumentMoniker": "C:\\QuickCareSim\\QuickCareSim.Domain\\Entities\\AttentionLog.cs",
+              "RelativeDocumentMoniker": "QuickCareSim.Domain\\Entities\\AttentionLog.cs",
+              "ToolTip": "C:\\QuickCareSim\\QuickCareSim.Domain\\Entities\\AttentionLog.cs",
+              "RelativeToolTip": "QuickCareSim.Domain\\Entities\\AttentionLog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T22:25:25.459Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SimulationPerformance.cs",
+              "DocumentMoniker": "C:\\QuickCareSim\\QuickCareSim.Domain\\Entities\\SimulationPerformance.cs",
+              "RelativeDocumentMoniker": "QuickCareSim.Domain\\Entities\\SimulationPerformance.cs",
+              "ToolTip": "C:\\QuickCareSim\\QuickCareSim.Domain\\Entities\\SimulationPerformance.cs",
+              "RelativeToolTip": "QuickCareSim.Domain\\Entities\\SimulationPerformance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T22:25:12.119Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d84ee353-0bef-5a41-a649-8f89aca5d84d}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

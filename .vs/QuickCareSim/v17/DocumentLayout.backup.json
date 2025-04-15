@@ -1,0 +1,177 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\QuickCareSim\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C7B46796-3633-4683-B5DD-1D501F2E1BE1}|QuickCareSim.Infrastructure.Identity\\QuickCareSim.Infrastructure.Identity.csproj|c:\\quickcaresim\\quickcaresim.infrastructure.identity\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7B46796-3633-4683-B5DD-1D501F2E1BE1}|QuickCareSim.Infrastructure.Identity\\QuickCareSim.Infrastructure.Identity.csproj|solutionrelative:quickcaresim.infrastructure.identity\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A027565F-E3DA-4B84-8F22-532CB7D6E18E}|QuickCareSim.Domain\\QuickCareSim.Domain.csproj|c:\\quickcaresim\\quickcaresim.domain\\enums\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A027565F-E3DA-4B84-8F22-532CB7D6E18E}|QuickCareSim.Domain\\QuickCareSim.Domain.csproj|solutionrelative:quickcaresim.domain\\enums\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28E3D93-9DDC-4D35-A106-DF408545E65E}|QuickCareSim.Presentation.WebApp\\QuickCareSim.Presentation.WebApp.csproj|c:\\quickcaresim\\quickcaresim.presentation.webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C28E3D93-9DDC-4D35-A106-DF408545E65E}|QuickCareSim.Presentation.WebApp\\QuickCareSim.Presentation.WebApp.csproj|solutionrelative:quickcaresim.presentation.webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12869EE3-FB57-496C-8B8F-BE45CEB9E789}|QuickCareSim.Infrastructure.Shared\\QuickCareSim.Infrastructure.Shared.csproj|c:\\quickcaresim\\quickcaresim.infrastructure.shared\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12869EE3-FB57-496C-8B8F-BE45CEB9E789}|QuickCareSim.Infrastructure.Shared\\QuickCareSim.Infrastructure.Shared.csproj|solutionrelative:quickcaresim.infrastructure.shared\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28E3D93-9DDC-4D35-A106-DF408545E65E}|QuickCareSim.Presentation.WebApp\\QuickCareSim.Presentation.WebApp.csproj|c:\\quickcaresim\\quickcaresim.presentation.webapp\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C28E3D93-9DDC-4D35-A106-DF408545E65E}|QuickCareSim.Presentation.WebApp\\QuickCareSim.Presentation.WebApp.csproj|solutionrelative:quickcaresim.presentation.webapp\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28E3D93-9DDC-4D35-A106-DF408545E65E}|QuickCareSim.Presentation.WebApp\\QuickCareSim.Presentation.WebApp.csproj|c:\\quickcaresim\\quickcaresim.presentation.webapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C28E3D93-9DDC-4D35-A106-DF408545E65E}|QuickCareSim.Presentation.WebApp\\QuickCareSim.Presentation.WebApp.csproj|solutionrelative:quickcaresim.presentation.webapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7B46796-3633-4683-B5DD-1D501F2E1BE1}|QuickCareSim.Infrastructure.Identity\\QuickCareSim.Infrastructure.Identity.csproj|c:\\quickcaresim\\quickcaresim.infrastructure.identity\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7B46796-3633-4683-B5DD-1D501F2E1BE1}|QuickCareSim.Infrastructure.Identity\\QuickCareSim.Infrastructure.Identity.csproj|solutionrelative:quickcaresim.infrastructure.identity\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28E3D93-9DDC-4D35-A106-DF408545E65E}|QuickCareSim.Presentation.WebApp\\QuickCareSim.Presentation.WebApp.csproj|c:\\quickcaresim\\quickcaresim.presentation.webapp\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C28E3D93-9DDC-4D35-A106-DF408545E65E}|QuickCareSim.Presentation.WebApp\\QuickCareSim.Presentation.WebApp.csproj|solutionrelative:quickcaresim.presentation.webapp\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 180,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\QuickCareSim\\QuickCareSim.Presentation.WebApp\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "QuickCareSim.Presentation.WebApp\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\QuickCareSim\\QuickCareSim.Presentation.WebApp\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "QuickCareSim.Presentation.WebApp\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAIAxwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T21:13:43.879Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d84ee353-0bef-5a41-a649-8f89aca5d84d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Roles.cs",
+              "DocumentMoniker": "C:\\QuickCareSim\\QuickCareSim.Domain\\Enums\\Roles.cs",
+              "RelativeDocumentMoniker": "QuickCareSim.Domain\\Enums\\Roles.cs",
+              "ToolTip": "C:\\QuickCareSim\\QuickCareSim.Domain\\Enums\\Roles.cs",
+              "RelativeToolTip": "QuickCareSim.Domain\\Enums\\Roles.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T21:59:43.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\QuickCareSim\\QuickCareSim.Presentation.WebApp\\appsettings.json",
+              "RelativeDocumentMoniker": "QuickCareSim.Presentation.WebApp\\appsettings.json",
+              "ToolTip": "C:\\QuickCareSim\\QuickCareSim.Presentation.WebApp\\appsettings.json",
+              "RelativeToolTip": "QuickCareSim.Presentation.WebApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-14T21:55:43.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\QuickCareSim\\QuickCareSim.Presentation.WebApp\\Program.cs",
+              "RelativeDocumentMoniker": "QuickCareSim.Presentation.WebApp\\Program.cs",
+              "ToolTip": "C:\\QuickCareSim\\QuickCareSim.Presentation.WebApp\\Program.cs",
+              "RelativeToolTip": "QuickCareSim.Presentation.WebApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T21:55:39.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\QuickCareSim\\QuickCareSim.Infrastructure.Shared\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "QuickCareSim.Infrastructure.Shared\\Services\\EmailService.cs",
+              "ToolTip": "C:\\QuickCareSim\\QuickCareSim.Infrastructure.Shared\\Services\\EmailService.cs",
+              "RelativeToolTip": "QuickCareSim.Infrastructure.Shared\\Services\\EmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T21:52:53.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\QuickCareSim\\QuickCareSim.Infrastructure.Identity\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "QuickCareSim.Infrastructure.Identity\\Services\\AuthService.cs",
+              "ToolTip": "C:\\QuickCareSim\\QuickCareSim.Infrastructure.Identity\\Services\\AuthService.cs",
+              "RelativeToolTip": "QuickCareSim.Infrastructure.Identity\\Services\\AuthService.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAlwEwAAAB9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T21:45:55.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\QuickCareSim\\QuickCareSim.Presentation.WebApp\\Views\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "QuickCareSim.Presentation.WebApp\\Views\\Auth\\Login.cshtml",
+              "ToolTip": "C:\\QuickCareSim\\QuickCareSim.Presentation.WebApp\\Views\\Auth\\Login.cshtml",
+              "RelativeToolTip": "QuickCareSim.Presentation.WebApp\\Views\\Auth\\Login.cshtml",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAQwGAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-14T21:37:07.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ServiceRegistration.cs",
+              "DocumentMoniker": "C:\\QuickCareSim\\QuickCareSim.Infrastructure.Identity\\ServiceRegistration.cs",
+              "RelativeDocumentMoniker": "QuickCareSim.Infrastructure.Identity\\ServiceRegistration.cs",
+              "ToolTip": "C:\\QuickCareSim\\QuickCareSim.Infrastructure.Identity\\ServiceRegistration.cs",
+              "RelativeToolTip": "QuickCareSim.Infrastructure.Identity\\ServiceRegistration.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAABsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T21:35:34.109Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
