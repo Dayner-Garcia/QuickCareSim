@@ -1,6 +1,4 @@
-﻿
-
-namespace QuickCareSim.Application.Interfaces.Services
+﻿namespace QuickCareSim.Application.Interfaces.Services.Core
 {
     public interface IGenericService<T, ViewModel, CreateVm, UpdateVm>
         where T : class

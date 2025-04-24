@@ -1,9 +1,7 @@
-using Microsoft.AspNetCore.Identity;
 using QuickCareSim.Application;
 using QuickCareSim.Application.Settings;
 using QuickCareSim.Domain.Enums;
 using QuickCareSim.Infrastructure.Identity;
-using QuickCareSim.Infrastructure.Identity.Entities;
 using QuickCareSim.Infrastructure.Persistance;
 using QuickCareSim.Infrastructure.Shared;
 
@@ -21,11 +19,8 @@ builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("SmtpS
 
 builder.Services.AddAuthorization(options =>
 {
-    options.AddPolicy("Admin", policy => policy.RequireRole(Roles.ADMIN.ToString()));
-    options.AddPolicy("Client", policy => policy.RequireRole(Roles.CLIENT.ToString()));
     options.AddPolicy("Doctor", policy => policy.RequireRole(Roles.DOCTOR.ToString()));
     options.AddPolicy("Patient", policy => policy.RequireRole(Roles.PATIENT.ToString()));
-    options.AddPolicy("Assistant", policy => policy.RequireRole(Roles.ASISTANT.ToString()));
     options.AddPolicy("Secretary", policy => policy.RequireRole(Roles.SECRETARY.ToString()));
 });
 
