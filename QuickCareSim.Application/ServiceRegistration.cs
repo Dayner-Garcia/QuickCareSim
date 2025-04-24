@@ -21,6 +21,8 @@ namespace QuickCareSim.Application
 
             #region Simulator
 
+            services.AddScoped<ISimulationInfoService, SimulationInfoService>();
+
 
             #endregion
 
@@ -34,6 +36,9 @@ namespace QuickCareSim.Application
 
             #region Users
 
+
+            services.AddScoped<IDoctorService, DoctorService>();
+            services.AddScoped<IPatientService, PatientService>();
 
             #endregion
 
