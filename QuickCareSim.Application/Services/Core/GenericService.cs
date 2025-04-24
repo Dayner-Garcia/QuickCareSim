@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using QuickCareSim.Application.Interfaces.Repositories;
-using QuickCareSim.Application.Interfaces.Services;
+using QuickCareSim.Application.Interfaces.Services.Core;
 
-namespace QuickCareSim.Application.Services
+namespace QuickCareSim.Application.Services.Core
 {
     public class GenericService<T, ViewModel, CreateVm, UpdateVm> : IGenericService<T, ViewModel, CreateVm, UpdateVm>
          where T : class

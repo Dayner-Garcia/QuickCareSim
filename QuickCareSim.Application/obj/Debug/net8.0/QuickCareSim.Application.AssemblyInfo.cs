@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QuickCareSim.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a085006e6caf97a34690762ce078091674f8359f")]
 [assembly: System.Reflection.AssemblyProductAttribute("QuickCareSim.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QuickCareSim.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

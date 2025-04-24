@@ -11,16 +11,11 @@ namespace QuickCareSim.Infrastructure.Persistance
     {
         public static void AddContextInfraestructure(this IServiceCollection services, IConfiguration configuration)
         {
-
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-
 
             if (configuration.GetValue<bool>("UseInMemoryDatabase"))
             {
-                services.AddDbContext<AppDbContext>(options =>
-                {
-                    options.UseInMemoryDatabase("ContextDb");
-                });
+                services.AddDbContext<AppDbContext>(options => { options.UseInMemoryDatabase("ContextDb"); });
             }
             else
             {

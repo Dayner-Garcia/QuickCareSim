@@ -19,7 +19,6 @@ namespace QuickCareSim.Infrastructure.Persistance.Repositories
         {
             await _dbSet.AddAsync(entity);
             return await _context.SaveChangesAsync();
-
         }
 
         public async Task<int> DeleteAsync(int id)
@@ -31,7 +30,6 @@ namespace QuickCareSim.Infrastructure.Persistance.Repositories
                 _dbSet.Remove(entity);
                 return await _context.SaveChangesAsync();
             }
-
             return 0;
         }
 
@@ -40,10 +38,18 @@ namespace QuickCareSim.Infrastructure.Persistance.Repositories
             return await _dbSet.ToListAsync();
         }
 
+        public async Task<List<T>> GetAllAsync(Func<IQueryable<T>, IQueryable<T>> queryModifier)
+        {
+            var query = queryModifier(_dbSet.AsQueryable());
+            return await query.ToListAsync();
+        }
+
         public async Task<T?> GetByIdAsync(int id)
         {
             return await _dbSet.FindAsync(id);
         }
+
+        public IQueryable<T> Query() => _dbSet.AsQueryable();
 
         public async Task<int> UpdateAsync(T entity)
         {

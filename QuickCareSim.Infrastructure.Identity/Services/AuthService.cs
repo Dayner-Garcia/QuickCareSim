@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-using QuickCareSim.Application.Interfaces.Services;
+using QuickCareSim.Application.Interfaces.Services.Core;
 using QuickCareSim.Application.ViewModels.Auth;
 using QuickCareSim.Domain.Enums;
 using QuickCareSim.Infrastructure.Identity.Entities;
@@ -53,9 +53,9 @@ namespace QuickCareSim.Infrastructure.Identity.Services
             if (!result.Succeeded)
                 throw new ValidationException(string.Join(", ", result.Errors.Select(e => e.Description)));
 
-                var token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
-                var activationLink = GenerateActivationLink(user.Email, token);
-                await SendActivationEmailAsync(user.Email, activationLink);
+            var token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
+            var activationLink = GenerateActivationLink(user.Email, token);
+            await SendActivationEmailAsync(user.Email, activationLink);
         }
 
         private string GenerateActivationLink(string email, string token)

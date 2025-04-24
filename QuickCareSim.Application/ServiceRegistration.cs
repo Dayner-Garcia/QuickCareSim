@@ -1,7 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using QuickCareSim.Application.Interfaces.Services;
+using QuickCareSim.Application.Interfaces.Services.Core;
 using QuickCareSim.Application.Mappings;
-using QuickCareSim.Application.Services;
+using QuickCareSim.Application.Services.Core;
+using QuickCareSim.Application.Services.Strategies;
+using QuickCareSim.Application.Services.Strategys;
 using System.Reflection;
 
 namespace QuickCareSim.Application
@@ -17,9 +19,29 @@ namespace QuickCareSim.Application
 
             #endregion
 
-            #region Patients
+            #region Simulator
+
 
             #endregion
+
+            #region Strategy
+
+            services.AddScoped<RoundRobinStrategyService>();
+            services.AddScoped<PriorityStrategyService>();
+            services.AddScoped<EmergencyTypeStrategyService>();
+
+            #endregion
+
+            #region Users
+
+
+            #endregion
+
+            #region exportsFiles
+
+
+            #endregion
+
 
 
             #region "Helpers"

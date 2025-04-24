@@ -2,13 +2,15 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using QuickCareSim.Application.Interfaces.Services;
 using QuickCareSim.Application.Mappings;
 using QuickCareSim.Infrastructure.Identity.Context;
 using QuickCareSim.Infrastructure.Identity.Entities;
 using QuickCareSim.Infrastructure.Identity.Seeds;
 using QuickCareSim.Infrastructure.Identity.Services;
 using System.Reflection;
+using QuickCareSim.Application.Interfaces.Repositories;
+using QuickCareSim.Domain.Entities;
+using QuickCareSim.Application.Interfaces.Services.Core;
 
 namespace QuickCareSim.Infrastructure.Identity
 {
@@ -16,16 +18,12 @@ namespace QuickCareSim.Infrastructure.Identity
     {
         public static void AddIdentityInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
-
             services.AddSingleton(TimeProvider.System);
 
 
             if (configuration.GetValue<bool>("UseInMemoryDatabase"))
             {
-                services.AddDbContext<IdentityContext>(options =>
-                {
-                    options.UseInMemoryDatabase("IdentityDb");
-                });
+                services.AddDbContext<IdentityContext>(options => { options.UseInMemoryDatabase("IdentityDb"); });
             }
             else
             {
@@ -46,15 +44,14 @@ namespace QuickCareSim.Infrastructure.Identity
                 options.Password.RequiredLength = 8;
                 options.User.RequireUniqueEmail = true;
             })
-            .AddEntityFrameworkStores<IdentityContext>()
-            .AddSignInManager<SignInManager<ApplicationUser>>()
-            .AddDefaultTokenProviders();
+                .AddEntityFrameworkStores<IdentityContext>()
+                .AddSignInManager<SignInManager<ApplicationUser>>()
+                .AddDefaultTokenProviders();
 
             services.Configure<DataProtectionTokenProviderOptions>(options =>
             {
                 options.TokenLifespan = TimeSpan.FromHours(2);
             });
-
         }
 
         public static void AddIdentityService(this IServiceCollection services)
@@ -66,20 +63,19 @@ namespace QuickCareSim.Infrastructure.Identity
 
         public static async Task RunIdentitySeeds(this IServiceProvider serviceProvider)
         {
-            using (var scope = serviceProvider.CreateScope())
-            {
-                var services = scope.ServiceProvider;
+            using var scope = serviceProvider.CreateScope();
+            var services = scope.ServiceProvider;
 
-                try
-                {
-                    var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
-                    var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
-                    await IdentitySeeder.SeedAsync(userManager, roleManager);
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception(ex.Message);
-                }
+            try
+            {
+                var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+                var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+                var doctorRepo = services.GetRequiredService<IGenericRepository<Doctor>>();
+                await IdentitySeeder.SeedAsync(userManager, roleManager, doctorRepo);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
             }
         }
     }

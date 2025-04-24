@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using QuickCareSim.Application.Interfaces.Services;
+using QuickCareSim.Application.Interfaces.Services.Core;
 using QuickCareSim.Application.ViewModels.Auth;
 
 namespace QuickCareSim.Presentation.WebApp.Controllers
