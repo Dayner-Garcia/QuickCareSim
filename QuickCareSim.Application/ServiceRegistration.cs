@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using QuickCareSim.Application.Interfaces.Services.Core;
 using QuickCareSim.Application.Interfaces.Services.Executors;
+using QuickCareSim.Application.Interfaces.Services.Strategies;
 using QuickCareSim.Application.Mappings;
 using QuickCareSim.Application.Services.Core;
 using QuickCareSim.Application.Services.Executors;
-using QuickCareSim.Application.Services.Strategies;
 using QuickCareSim.Application.Services.Strategys;
 using System.Reflection;
 
@@ -23,6 +23,7 @@ namespace QuickCareSim.Application
 
             #region Simulator
 
+            services.AddScoped<IAttentionStrategyFactoryService, AttentionStrategyFactoryService>();
             services.AddScoped<ISimulationMetricsService, SimulationMetricsService>();
             services.AddScoped<ISimulationInfoService, SimulationInfoService>();
 
