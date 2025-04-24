@@ -1,8 +1,6 @@
-﻿
+﻿using QuickCareSim.Application.ViewModels.Auth;
 
-using QuickCareSim.Application.ViewModels.Auth;
-
-namespace QuickCareSim.Application.Interfaces.Services
+namespace QuickCareSim.Application.Interfaces.Services.Core
 {
     public interface IAuthService
     {

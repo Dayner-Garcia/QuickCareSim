@@ -1,5 +1,4 @@
 ﻿@model QuickCareSim.Application.ViewModels.Auth.RegisterViewModel
-
 @{
     Layout = null;
     ViewData["Title"] = "Registro";
@@ -10,172 +9,147 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registro - ClothingCo</title>
+    <title>Registro - QuickCareSim</title>
 
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #c6ffdd, #fbd786, #f7797d);
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: 'Segoe UI', sans-serif;
+            min-height: 100vh;
         }
 
-        .register-card {
-            background: rgba(255, 255, 255, 0.25);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 24px;
-            padding: 40px;
-            max-width: 800px;
+        .register-wrapper {
             width: 100%;
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+            max-width: 900px;
         }
 
-        h2 {
-            text-align: center;
-            color: #2e7d32;
-            margin-bottom: 30px;
-            font-weight: bold;
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
         }
 
-        label {
-            font-weight: 600;
-            color: #333;
-        }
+            .card h2 {
+                color: #2e7d32;
+            }
 
         .form-control, .form-select {
-            border-radius: 12px;
-            padding: 12px;
-            border: 1px solid #ccc;
-            margin-bottom: 15px;
-            transition: box-shadow 0.2s ease-in-out;
-        }
-
-        .form-control:focus, .form-select:focus {
-            box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.3);
+            border-radius: 10px;
         }
 
         .btn-register {
-            width: 100%;
             background-color: #2e7d32;
-            border: none;
-            padding: 12px;
-            color: white;
+            border-color: #2e7d32;
             font-weight: bold;
-            border-radius: 12px;
-            transition: background-color 0.3s ease;
         }
 
-        .btn-register:hover {
-            background-color: #1b5e20;
-        }
+            .btn-register:hover {
+                background-color: #1b5e20;
+            }
 
         .footer-text {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 1rem;
             font-size: 0.95rem;
-            color: #333;
         }
 
-        .footer-text a {
-            color: #2e7d32;
-            text-decoration: none;
-            font-weight: bold;
-        }
+            .footer-text a {
+                text-decoration: none;
+                color: #0d6efd;
+                font-weight: 500;
+            }
 
-        .footer-text a:hover {
-            text-decoration: underline;
-        }
-
-        .alert, .text-danger {
-            font-size: 0.95rem;
-            border-radius: 8px;
-        }
+                .footer-text a:hover {
+                    text-decoration: underline;
+                }
     </style>
 </head>
 <body>
-    <div class="register-card">
-        <h2><i class="fas fa-user-plus"></i> Crea tu Cuenta</h2>
+    <div class="register-wrapper">
+        <div class="card p-4">
+            <div class="card-body">
+                <h2 class="text-center mb-4">
+                    <i class="bi bi-person-plus-fill me-2"></i> Crea tu Cuenta
+                </h2>
 
-        <form asp-action="Register" method="post" enctype="multipart/form-data">
-            @Html.AntiForgeryToken()
+                <form asp-action="Register" method="post" enctype="multipart/form-data">
+                    @Html.AntiForgeryToken()
 
-            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <label for="Name">Nombre</label>
-                    <input type="text" id="Name" name="Name" class="form-control" value="@Model.Name" placeholder="Ingresa tu nombre" />
-                    <span asp-validation-for="Name" class="text-danger"></span>
-                </div>
-                <div class="col-md-6">
-                    <label for="LastName">Apellido</label>
-                    <input type="text" id="LastName" name="LastName" class="form-control" value="@Model.LastName" placeholder="Ingresa tu apellido" />
-                    <span asp-validation-for="LastName" class="text-danger"></span>
-                </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label asp-for="Name"><i class="bi bi-person-fill me-1"></i> Nombre</label>
+                            <input asp-for="Name" class="form-control" placeholder="Ingresa tu nombre" />
+                            <span asp-validation-for="Name" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="LastName"><i class="bi bi-person-fill me-1"></i> Apellido</label>
+                            <input asp-for="LastName" class="form-control" placeholder="Ingresa tu apellido" />
+                            <span asp-validation-for="LastName" class="text-danger small"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label asp-for="PhoneNumber"><i class="bi bi-telephone-fill me-1"></i> Teléfono</label>
+                            <input asp-for="PhoneNumber" class="form-control" placeholder="809-000-0000" />
+                            <span asp-validation-for="PhoneNumber" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="UserName"><i class="bi bi-person-badge-fill me-1"></i> Usuario</label>
+                            <input asp-for="UserName" class="form-control" placeholder="Nombre de usuario" />
+                            <span asp-validation-for="UserName" class="text-danger small"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label asp-for="Email"><i class="bi bi-envelope-fill me-1"></i> Correo Electrónico</label>
+                            <input asp-for="Email" class="form-control" placeholder="ej. correo@mail.com" />
+                            <span asp-validation-for="Email" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="Password"><i class="bi bi-lock-fill me-1"></i> Contraseña</label>
+                            <input asp-for="Password" type="password" class="form-control" placeholder="••••••••" />
+                            <span asp-validation-for="Password" class="text-danger small"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label asp-for="RepeatPassword"><i class="bi bi-lock-fill me-1"></i> Confirmar Contraseña</label>
+                            <input asp-for="RepeatPassword" type="password" class="form-control" placeholder="Repite tu contraseña" />
+                            <span asp-validation-for="RepeatPassword" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="Role"><i class="bi bi-person-vcard-fill me-1"></i> Tipo de Usuario</label>
+                            <select asp-for="Role" class="form-select">
+                                <option value="DOCTOR">Doctor</option>
+                                <option value="SECRETARY">Secretario/a</option>
+                            </select>
+                            <span asp-validation-for="Role" class="text-danger small"></span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-register w-100 mt-3">
+                        <i class="bi bi-check-circle-fill me-1"></i> Registrarme
+                    </button>
+
+                    <div class="footer-text mt-4">
+                        ¿Ya tienes cuenta?
+                        <a href="/Auth/Login"><i class="bi bi-box-arrow-in-right me-1"></i>Inicia Sesión</a>
+                    </div>
+                </form>
             </div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <label for="PhoneNumber">Teléfono</label>
-                    <input type="tel" id="PhoneNumber" name="PhoneNumber" class="form-control" value="@Model.PhoneNumber" placeholder="Ingresa tu teléfono" />
-                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-                </div>
-                <div class="col-md-6">
-                    <label for="UserName">Nombre de Usuario</label>
-                    <input type="text" id="UserName" name="Username" class="form-control" value="@Model.UserName" placeholder="Elige tu nombre de usuario" />
-                    <span asp-validation-for="UserName" class="text-danger"></span>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <label for="Email">Correo Electrónico</label>
-                    <input type="email" id="Email" name="Email" class="form-control" value="@Model.Email" placeholder="Ingresa tu correo" />
-                    <span asp-validation-for="Email" class="text-danger"></span>
-                </div>
-                <div class="col-md-6">
-                    <label for="Password">Contraseña</label>
-                    <input type="password" id="Password" name="Password" class="form-control" placeholder="Ingresa tu contraseña" />
-                    <span asp-validation-for="Password" class="text-danger"></span>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <label for="RepeatPassword">Confirmar Contraseña</label>
-                    <input type="password" id="RepeatPassword" name="RepeatPassword" class="form-control" placeholder="Confirma tu contraseña" />
-                    <span asp-validation-for="RepeatPassword" class="text-danger"></span>
-                </div>
-                <div class="col-md-6">
-                    <label for="Role">Tipo de Usuario</label>
-                    <select id="Role" name="Role" class="form-select" required>
-                        <option value="CLIENT">Cliente</option>
-                        <option value="DOCTOR">Doctor</option>
-                        <option value="PATIENT">Paciente</option>
-                        <option value="ASISTANT">Asistente</option>
-                        <option value="SECRETARY">Secretario/a</option>
-                    </select>
-                    <span asp-validation-for="Role" class="text-danger"></span>
-                </div>
-            </div>
-
-            <button type="submit" class="btn-register mt-3">
-                <i class="fas fa-check-circle"></i> Registrarme
-            </button>
-
-            <div class="footer-text mt-4">
-                ¿Ya tienes cuenta? <a href="/Auth/Login">Inicia Sesión</a>
-            </div>
-        </form>
+        </div>
     </div>
 
-    <script src="https://kit.fontawesome.com/a2d9a66a2a.js" crossorigin="anonymous"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
