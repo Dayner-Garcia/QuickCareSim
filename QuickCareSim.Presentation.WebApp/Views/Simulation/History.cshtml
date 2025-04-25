@@ -37,7 +37,7 @@
             <tbody>
             @foreach (var sim in Model)
             {
-                var realTime = Math.Round(sim.RealExecutionTimeSeconds, 2);
+                var realTime = Math.Round(sim.ExecutionTimeSeconds  , 2);
                 var showStats = realTime > 0 && sim.ExecutionMode != "Sequential";
 
                 <tr>

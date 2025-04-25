@@ -53,7 +53,7 @@ namespace QuickCareSim.Application.Services.Core
             package.SaveAs(new FileInfo(outputPath));
         }
 
-        public async Task ExportPerformanceCsvAsync(int simulationId, string outputPath)
+        public async Task ExportPerformanceCsvAsync(int simulationId, string outputPath, Dictionary<string, string> doctorNames)
         {
             var run = await GetSimulationWithMetricsAsync(simulationId)
                       ?? throw new Exception("Simulación no encontrada.");
@@ -63,16 +63,16 @@ namespace QuickCareSim.Application.Services.Core
 
             foreach (var m in run.PerformanceMetrics)
             {
-                var doctorName = m.Doctor != null
-                    ? $"{m.Doctor.UserId}"
+                var doctorName = m.Doctor != null && doctorNames.TryGetValue(m.Doctor.UserId, out var name)
+                    ? name
                     : m.DoctorId;
 
-                sb.AppendLine(
-                    $"{doctorName};{m.PatientsAttended};{m.AverageAttentionTimeSeconds.ToString(CultureInfo.InvariantCulture)}");
+                sb.AppendLine($"{doctorName};{m.PatientsAttended};{m.AverageAttentionTimeSeconds.ToString(CultureInfo.InvariantCulture)}");
             }
 
             await File.WriteAllTextAsync(outputPath, sb.ToString(), Encoding.UTF8);
         }
+
 
 
         public async Task ExportUrgencyCsvAsync(int simulationId, string outputPath)

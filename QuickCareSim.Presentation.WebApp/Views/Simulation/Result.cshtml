@@ -33,7 +33,7 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
                         <strong><i class="bi bi-speedometer2 me-2"></i>Pacientes/minuto:</strong>
-                        @if (Model.RealExecutionTimeSeconds > 0)
+                        @if (Model.ExecutionTimeSeconds > 0)
                         {
                             <span>@Math.Round(Model.PatientsPerMinute, 2)</span>
                         }
@@ -44,9 +44,9 @@
                     </li>
                     <li class="list-group-item">
                         <strong><i class="bi bi-clock me-2"></i>Tiempo Real:</strong>
-                        @if (Model.RealExecutionTimeSeconds > 0)
+                        @if (Model.ExecutionTimeSeconds > 0)
                         {
-                            <span>@Math.Round(Model.RealExecutionTimeSeconds, 2) s</span>
+                            <span>@Math.Round(Model.ExecutionTimeSeconds, 2) s</span>
                         }
                         else
                         {

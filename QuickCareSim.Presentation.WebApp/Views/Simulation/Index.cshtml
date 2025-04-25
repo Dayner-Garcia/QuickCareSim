@@ -15,7 +15,7 @@
                 <label asp-for="DoctorsToUse" class="form-label fw-bold">
                     <i class="bi bi-person-badge me-1"></i> @Html.DisplayNameFor(m => m.DoctorsToUse)
                 </label>
-                <input asp-for="DoctorsToUse" class="form-control"/>
+                <input asp-for="DoctorsToUse" class="form-control" />
                 <span asp-validation-for="DoctorsToUse" class="text-danger small"></span>
                 <p class="text-muted small">Doctores disponibles: <strong>@ViewBag.AvailableDoctorsCount</strong></p>
             </div>
@@ -24,7 +24,7 @@
                 <label asp-for="TotalPatients" class="form-label fw-bold">
                     <i class="bi bi-people-fill me-1"></i> @Html.DisplayNameFor(m => m.TotalPatients)
                 </label>
-                <input asp-for="TotalPatients" class="form-control"/>
+                <input asp-for="TotalPatients" class="form-control" />
                 <span asp-validation-for="TotalPatients" class="text-danger small"></span>
             </div>
 
@@ -32,8 +32,7 @@
                 <label asp-for="Strategy" class="form-label fw-bold">
                     <i class="bi bi-diagram-3 me-1"></i> @Html.DisplayNameFor(m => m.Strategy)
                 </label>
-                <select asp-for="Strategy" asp-items="Html.GetEnumSelectList<QuickCareSim.Domain.Enums.StrategyType>()"
-                        class="form-select"></select>
+                <select asp-for="Strategy" asp-items="Html.GetEnumSelectList<QuickCareSim.Domain.Enums.StrategyType>()" class="form-select"></select>
             </div>
 
             <div class="mb-4">

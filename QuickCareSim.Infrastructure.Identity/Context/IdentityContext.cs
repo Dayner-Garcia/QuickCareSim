@@ -7,7 +7,9 @@ namespace QuickCareSim.Infrastructure.Identity.Context
 {
     public sealed class IdentityContext : IdentityDbContext<ApplicationUser>
     {
-        public IdentityContext(DbContextOptions<IdentityContext> options) : base(options) { }
+        public IdentityContext(DbContextOptions<IdentityContext> options) : base(options)
+        {
+        }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
