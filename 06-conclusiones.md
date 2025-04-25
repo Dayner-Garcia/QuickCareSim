@@ -1,1 +1,0 @@
-# Reflexiones y ventajas del paralelismo.
