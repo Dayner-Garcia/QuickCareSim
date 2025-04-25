@@ -7,6 +7,9 @@ using QuickCareSim.Application.Services.Core;
 using QuickCareSim.Application.Services.Executors;
 using QuickCareSim.Application.Services.Strategys;
 using System.Reflection;
+using QuickCareSim.Application.Interfaces.Services;
+
+
 
 namespace QuickCareSim.Application
 {
@@ -50,6 +53,8 @@ namespace QuickCareSim.Application
             #endregion
 
             #region exportsFiles
+
+            services.AddScoped<IExportMetricsService, ExportMetricsService>();
 
 
             #endregion
