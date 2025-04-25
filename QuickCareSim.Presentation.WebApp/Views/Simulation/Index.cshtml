@@ -1,0 +1,99 @@
+@model QuickCareSim.Application.ViewModels.UrgencyRoom.SimulationParametersViewModel
+
+@{
+    ViewData["Title"] = "Iniciar simulacion";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm p-4">
+        <h2 class="mb-4 text-primary">
+            <i class="bi bi-cpu me-2"></i>Simulación de Atención
+        </h2>
+
+        <form method="post" id="simulation-form">
+            <div class="mb-3">
+                <label asp-for="DoctorsToUse" class="form-label fw-bold">
+                    <i class="bi bi-person-badge me-1"></i> @Html.DisplayNameFor(m => m.DoctorsToUse)
+                </label>
+                <input asp-for="DoctorsToUse" class="form-control"/>
+                <span asp-validation-for="DoctorsToUse" class="text-danger small"></span>
+                <p class="text-muted small">Doctores disponibles: <strong>@ViewBag.AvailableDoctorsCount</strong></p>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="TotalPatients" class="form-label fw-bold">
+                    <i class="bi bi-people-fill me-1"></i> @Html.DisplayNameFor(m => m.TotalPatients)
+                </label>
+                <input asp-for="TotalPatients" class="form-control"/>
+                <span asp-validation-for="TotalPatients" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Strategy" class="form-label fw-bold">
+                    <i class="bi bi-diagram-3 me-1"></i> @Html.DisplayNameFor(m => m.Strategy)
+                </label>
+                <select asp-for="Strategy" asp-items="Html.GetEnumSelectList<QuickCareSim.Domain.Enums.StrategyType>()"
+                        class="form-select"></select>
+            </div>
+
+            <div class="mb-4">
+                <label asp-for="ExecutionMode" class="form-label fw-bold">
+                    <i class="bi bi-hdd-stack me-1"></i> Modo de Ejecución
+                </label>
+                <select asp-for="ExecutionMode" class="form-select" id="ExecutionMode">
+                    <option value="Parallel">Paralelo</option>
+                    <option value="Sequential">Secuencial</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+                <i class="bi bi-play-fill me-1"></i> Iniciar Simulación
+            </button>
+        </form>
+    </div>
+    <!-- Pantalla de Carga -->
+    <div id="loading-overlay"
+         class="position-fixed top-0 start-0 w-100 h-100 bg-white bg-opacity-75 d-flex flex-column justify-content-center align-items-center d-none"
+         style="z-index: 1050; backdrop-filter: blur(4px);">
+        <div class="text-center">
+            <div class="spinner-border text-primary mb-3" role="status" style="width: 3rem; height: 3rem;">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-center gap-2">
+                <i class="bi bi-cpu-fill fs-4 text-primary"></i>
+                <h5 class="text-primary m-0 fw-semibold">Ejecutando simulación</h5>
+            </div>
+            <p class="text-muted mt-2"><i class="bi bi-hourglass-split me-1"></i>Por favor, espera unos segundos...</p>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        const modeSelect = document.getElementById("ExecutionMode");
+        const doctorInput = document.querySelector('[name="DoctorsToUse"]');
+        const doctorGroup = doctorInput.closest(".mb-3");
+        const maxDoctors = @ViewBag.AvailableDoctorsCount;
+
+        function toggleDoctorField() {
+            doctorGroup.style.display = (modeSelect.value === "Sequential") ? "none" : "block";
+        }
+
+        function validateDoctorInput() {
+            const value = parseInt(doctorInput.value, 10);
+            if (value > maxDoctors) {
+                alert(`Solo hay ${maxDoctors} doctores disponibles.`);
+                doctorInput.value = maxDoctors;
+            }
+        }
+
+        toggleDoctorField();
+        modeSelect.addEventListener("change", toggleDoctorField);
+        doctorInput.addEventListener("blur", validateDoctorInput);
+
+        const form = document.getElementById('simulation-form');
+        form?.addEventListener('submit', function () {
+            document.getElementById('loading-overlay').classList.remove('d-none');
+        });
+    </script>
+}

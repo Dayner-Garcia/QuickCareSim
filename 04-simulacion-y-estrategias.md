@@ -1,1 +1,0 @@
-# Cómo funciona la simulación y los tipos de estrategia.

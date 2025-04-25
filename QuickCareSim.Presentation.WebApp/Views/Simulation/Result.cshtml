@@ -1,0 +1,217 @@
+@model QuickCareSim.Application.ViewModels.UrgencyRoom.SimulationResultViewModel
+@using QuickCareSim.Application.ViewModels.UrgencyRoom
+@{
+    ViewData["Title"] = "Resultados de Simulación";
+    var metrics = ViewBag.Metrics as List<UrgencyWaitMetricViewModel>;
+    var perfMetrics = ViewBag.PerformanceMetrics as List<PerformanceMetricViewModel>;
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm p-4 mb-4">
+        <h2 class="text-primary mb-4"><i class="bi bi-activity me-2"></i>Resumen de Simulación</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <strong>ID:</strong> @Model.Id
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Estrategia:</strong> <span class="badge bg-info text-dark">@Model.StrategyUsed</span>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Pacientes:</strong> @Model.TotalPatients
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Atendidos:</strong> @Model.TotalPatientsAttended
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Doctores:</strong> @Model.TotalDoctors
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <strong><i class="bi bi-speedometer2 me-2"></i>Pacientes/minuto:</strong>
+                        @if (Model.RealExecutionTimeSeconds > 0)
+                        {
+                            <span>@Math.Round(Model.PatientsPerMinute, 2)</span>
+                        }
+                        else
+                        {
+                            <span class="text-warning">N/D</span>
+                        }
+                    </li>
+                    <li class="list-group-item">
+                        <strong><i class="bi bi-clock me-2"></i>Tiempo Real:</strong>
+                        @if (Model.RealExecutionTimeSeconds > 0)
+                        {
+                            <span>@Math.Round(Model.RealExecutionTimeSeconds, 2) s</span>
+                        }
+                        else
+                        {
+                            <span class="text-warning">No registrado</span>
+                        }
+                    </li>
+                    @if (Model.ExecutionMode == "Parallel")
+                    {
+                        if (Model.Speedup == -1 && Model.Efficiency == -1)
+                        {
+                            <li class="list-group-item text-danger text-center fw-semibold">
+                                <i class="bi bi-x-octagon me-2"></i>Error al calcular métricas.
+                            </li>
+                        }
+                        else if (Model.Speedup == null || Model.Efficiency == null)
+                        {
+                            <li class="list-group-item text-warning text-center fw-semibold">
+                                <i class="bi bi-hourglass-split me-2"></i>Métricas de rendimiento no disponibles.
+                                <form id="calculate-form" asp-action="CalculateMetrics" asp-controller="Simulation" method="post" class="d-inline ms-3">
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="id" value="@Model.Id" />
+                                    <button id="calculate-btn" type="submit" class="btn btn-sm btn-outline-secondary">
+                                        <i class="bi bi-graph-up"></i> Calcular Ahora
+                                    </button>
+                                </form>
+                                <div id="speedup-loading" class="text-center mt-3 d-none">
+                                    <div class="spinner-border text-primary" role="status">
+                                        <span class="visually-hidden">Calculando...</span>
+                                    </div>
+                                    <p class="mt-2 text-muted">Calculando métricas... Por favor, espera.</p>
+                                </div>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="list-group-item">
+                                <strong><i class="bi bi-lightning me-2"></i>Speedup:</strong> @Model.Speedup
+                            </li>
+                            <li class="list-group-item">
+                                <strong><i class="bi bi-bar-chart me-2"></i>Eficiencia:</strong> @Model.Efficiency
+                            </li>
+                            <form method="get" asp-action="ExportSummaryExcel" asp-route-id="@Model.Id" class="mt-3">
+                                <button type="submit" class="btn btn-sm btn-outline-dark">
+                                    <i class="bi bi-file-earmark-excel"></i> Exportar Resumen
+                                </button>
+                            </form>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm p-4 mb-4">
+        <h3 class="text-success mb-3"><i class="bi bi-clipboard-data me-2"></i>Métricas por Nivel de Urgencia</h3>
+        @if (metrics != null && metrics.Any())
+        {
+            <table class="table table-hover table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Urgencia</th>
+                        <th>Prom. Espera (s)</th>
+                        <th>Total de Pacientes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var m in metrics)
+                    {
+                        <tr>
+                            <td>
+                                <span class="badge bg-secondary">@m.UrgencyLevel</span>
+                            </td>
+                            <td>@m.AverageWaitSeconds</td>
+                            <td>@m.TotalPatients</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <form method="get" asp-action="ExportUrgencyCsv" asp-route-id="@Model.Id" class="text-end">
+                <button type="submit" class="btn btn-sm btn-outline-warning">
+                    <i class="bi bi-filetype-csv"></i> Exportar Urgencias
+                </button>
+            </form>
+        }
+        else
+        {
+            <div class="alert alert-warning"><i class="bi bi-exclamation-triangle-fill me-2"></i>No hay métricas disponibles.</div>
+        }
+    </div>
+
+    <div class="card shadow-sm p-4">
+        <h3 class="text-info mb-3"><i class="bi bi-person-lines-fill me-2"></i>Métricas por Doctor</h3>
+        @if (perfMetrics != null && perfMetrics.Any())
+        {
+            <table class="table table-striped table-bordered">
+                <thead class="table-secondary">
+                    <tr>
+                        <th>Doctor</th>
+                        <th>Pacientes Atendidos</th>
+                        <th>Tiempo Promedio Atención (s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var p in perfMetrics.OrderBy(p => p.AverageAttentionTimeSeconds))
+                    {
+                        var doctorNames = ViewBag.DoctorNames as Dictionary<string, string>;
+                        <tr>
+                            <td>@(doctorNames != null && doctorNames.ContainsKey(p.DoctorId) ? doctorNames[p.DoctorId] : p.DoctorId)</td>
+                            <td>@p.PatientsAttended</td>
+                            <td>@p.AverageAttentionTimeSeconds</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <form method="get" asp-action="ExportPerformanceCsv" asp-route-id="@Model.Id" class="text-end">
+                <button type="submit" class="btn btn-sm btn-outline-success">
+                    <i class="bi bi-filetype-csv"></i> Exportar Doctores
+                </button>
+            </form>
+        }
+        else
+        {
+            <div class="alert alert-info"><i class="bi bi-info-circle-fill me-2"></i>No hay métricas por doctor disponibles.</div>
+        }
+    </div>
+
+    <form method="get" asp-action="Result" asp-route-id="@Model.Id" class="text-end mt-4">
+        <button type="submit" class="btn btn-outline-primary">
+            <i class="bi bi-arrow-repeat"></i> Actualizar Resultados
+        </button>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById('calculate-form')?.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const form = this;
+            const token = document.querySelector('input[name="__RequestVerificationToken"]')?.value;
+
+            document.getElementById('calculate-btn').classList.add('d-none');
+            document.getElementById('speedup-loading').classList.remove('d-none');
+
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                headers: {
+                    'RequestVerificationToken': token
+                },
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    setTimeout(() => location.reload(), 500);
+                } else {
+                    throw new Error("Error al calcular métricas");
+                }
+            })
+            .catch(error => {
+                alert("Hubo un problema al calcular las métricas.");
+                location.reload();
+            });
+        });
+    </script>
+}

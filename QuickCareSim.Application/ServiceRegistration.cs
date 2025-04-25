@@ -10,14 +10,12 @@ using System.Reflection;
 using QuickCareSim.Application.Interfaces.Services;
 
 
-
 namespace QuickCareSim.Application
 {
     public static class ServiceRegistration
     {
         public static void AddServicesForWebApp(this IServiceCollection services)
         {
-
             #region "GenericService"
 
             services.AddScoped(typeof(IGenericService<,,,>), typeof(GenericService<,,,>));
@@ -46,7 +44,6 @@ namespace QuickCareSim.Application
 
             #region Users
 
-
             services.AddScoped<IDoctorService, DoctorService>();
             services.AddScoped<IPatientService, PatientService>();
 
@@ -56,13 +53,21 @@ namespace QuickCareSim.Application
 
             services.AddScoped<IExportMetricsService, ExportMetricsService>();
 
+            #endregion
+
+            #region ParallelSimulator
+
+            services.AddScoped<IParallelSimulationExecutor, ParallelSimulationExcecutor>();
 
             #endregion
 
+            #region SimulationRetry
 
+            services.AddScoped<ISimulationRetryHandler, SimulationRetryHandler>();
+
+            #endregion
 
             #region "Helpers"
-
 
             #endregion
 
