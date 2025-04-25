@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using QuickCareSim.Application.Interfaces.Services;
 using QuickCareSim.Application.Interfaces.Services.Core;
 using QuickCareSim.Application.Interfaces.Services.Executors;
 using QuickCareSim.Application.Interfaces.Services.Strategies;
@@ -7,8 +8,6 @@ using QuickCareSim.Application.Services.Core;
 using QuickCareSim.Application.Services.Executors;
 using QuickCareSim.Application.Services.Strategys;
 using System.Reflection;
-using QuickCareSim.Application.Interfaces.Services;
-
 
 namespace QuickCareSim.Application
 {
@@ -22,15 +21,18 @@ namespace QuickCareSim.Application
 
             #endregion
 
+            #region Services
+
             #region Simulator
 
-            services.AddScoped<IAttentionStrategyFactoryService, AttentionStrategyFactoryService>();
             services.AddScoped<ISimulationMetricsService, SimulationMetricsService>();
             services.AddScoped<ISimulationInfoService, SimulationInfoService>();
-
-
+            services.AddScoped<ISimulationRetryHandler, SimulationRetryHandler>();
+            services.AddScoped<ISimulationRecoveryService, SimulationRecoveryService>();
+            services.AddScoped<IParallelSimulationExecutor, ParallelSimulationExcecutor>();
             services.AddScoped<ISequentialSimulationExecutor, SequentialSimulationExecutor>();
             services.AddScoped<ISpeedupCalculator, SpeedupCalculator>();
+            services.AddScoped<IAttentionStrategyFactoryService, AttentionStrategyFactoryService>();
 
             #endregion
 
@@ -54,16 +56,6 @@ namespace QuickCareSim.Application
             services.AddScoped<IExportMetricsService, ExportMetricsService>();
 
             #endregion
-
-            #region ParallelSimulator
-
-            services.AddScoped<IParallelSimulationExecutor, ParallelSimulationExcecutor>();
-
-            #endregion
-
-            #region SimulationRetry
-
-            services.AddScoped<ISimulationRetryHandler, SimulationRetryHandler>();
 
             #endregion
 
