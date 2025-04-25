@@ -10,14 +10,14 @@
         "projectUniqueName": "C:\\QuickCareSim\\QuickCareSim.Application\\QuickCareSim.Application.csproj",
         "projectName": "QuickCareSim.Application",
         "projectPath": "C:\\QuickCareSim\\QuickCareSim.Application\\QuickCareSim.Application.csproj",
-        "packagesPath": "C:\\Users\\dayne\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Delio\\.nuget\\packages\\",
         "outputPath": "C:\\QuickCareSim\\QuickCareSim.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\dayne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Delio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -85,14 +85,14 @@
         "projectUniqueName": "C:\\QuickCareSim\\QuickCareSim.Domain\\QuickCareSim.Domain.csproj",
         "projectName": "QuickCareSim.Domain",
         "projectPath": "C:\\QuickCareSim\\QuickCareSim.Domain\\QuickCareSim.Domain.csproj",
-        "packagesPath": "C:\\Users\\dayne\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Delio\\.nuget\\packages\\",
         "outputPath": "C:\\QuickCareSim\\QuickCareSim.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\dayne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Delio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -150,14 +150,14 @@
         "projectUniqueName": "C:\\QuickCareSim\\QuickCareSim.Infrastructure.Shared\\QuickCareSim.Infrastructure.Shared.csproj",
         "projectName": "QuickCareSim.Infrastructure.Shared",
         "projectPath": "C:\\QuickCareSim\\QuickCareSim.Infrastructure.Shared\\QuickCareSim.Infrastructure.Shared.csproj",
-        "packagesPath": "C:\\Users\\dayne\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Delio\\.nuget\\packages\\",
         "outputPath": "C:\\QuickCareSim\\QuickCareSim.Infrastructure.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\dayne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Delio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

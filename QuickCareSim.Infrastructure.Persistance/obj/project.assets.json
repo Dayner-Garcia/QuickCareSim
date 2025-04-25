@@ -3980,7 +3980,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dayne\\.nuget\\packages\\": {},
+    "C:\\Users\\Delio\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -3989,14 +3989,14 @@
       "projectUniqueName": "C:\\QuickCareSim\\QuickCareSim.Infrastructure.Persistance\\QuickCareSim.Infrastructure.Persistance.csproj",
       "projectName": "QuickCareSim.Infrastructure.Persistance",
       "projectPath": "C:\\QuickCareSim\\QuickCareSim.Infrastructure.Persistance\\QuickCareSim.Infrastructure.Persistance.csproj",
-      "packagesPath": "C:\\Users\\dayne\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Delio\\.nuget\\packages\\",
       "outputPath": "C:\\QuickCareSim\\QuickCareSim.Infrastructure.Persistance\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\dayne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Delio\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
