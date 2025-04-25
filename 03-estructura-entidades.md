@@ -128,3 +128,12 @@ SimulationRunId: Simulación asociada.
 
 
 -----------------------------------------------------------------------------------------------------------
+
+
+## Diagrama
+
+Diagrama ERD ![Screenshot 2025-04-24 114449](https://github.com/user-attachments/assets/2bff272e-f57c-4f2b-ac3a-5dbbd2b357f1)
+
+-----------------------------------------------------------------------------------------------------------
+
+## Nota: Las entidades relacionadas con Identity (Users, Roles, UserRoles, etc.) se utilizan únicamente para autenticación, asignación y referencia de usuarios (doctores), sin lógica de negocio directa en la simulación.
