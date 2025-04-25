@@ -3,10 +3,15 @@ namespace QuickCareSim.Domain.Entities
 {
     public class PerformanceMetric
     {
-        public int Id { get; set; }
-        public string DoctorId { get; set; } = string.Empty;
-        public Doctor Doctor { get; set; } = null!;
-        public int PatientsAttended { get; set; }
-        public double AverageAttentionTimeSeconds { get; set; }
+         public int Id { get; set; }
+         
+         public string DoctorId { get; set; } = string.Empty;
+         public Doctor Doctor { get; set; } = null!;
+         
+         public int PatientsAttended { get; set; }
+         public double AverageAttentionTimeSeconds { get; set; }
+         
+         public int SimulationRunId { get; set; }
+         public SimulationRun SimulationRun { get; set; } = null!;
     }
 }
