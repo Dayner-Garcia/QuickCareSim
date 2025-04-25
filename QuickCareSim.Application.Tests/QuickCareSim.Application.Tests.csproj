@@ -32,4 +32,9 @@
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="obj\Debug\net8.0\QuickCareSim.Application.Tests.csproj.BuildWithSkipAnalyzers" />
+	  <Content Include="obj\Debug\net8.0\QuickCareSim.Application.Tests.sourcelink.json" />
+	</ItemGroup>
 </Project>

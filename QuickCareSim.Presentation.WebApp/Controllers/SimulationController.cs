@@ -188,12 +188,17 @@ namespace QuickCareSim.Presentation.WebApp.Controllers
         [HttpGet]
         public async Task<IActionResult> ExportPerformanceCsv(int id)
         {
+            var users = await _userManager.Users.ToListAsync();
+            var doctorNames = users.ToDictionary(u => u.Id, u => $"{u.Name} {u.LastName}");
+
             var tempPath = Path.Combine(Path.GetTempPath(), $"doctores-{id}.csv");
-            await _exportService.ExportPerformanceCsvAsync(id, tempPath);
+            await _exportService.ExportPerformanceCsvAsync(id, tempPath, doctorNames);
+
             return File(System.IO.File.ReadAllBytes(tempPath),
                 "text/csv",
                 $"tiempo-promedio-doctores-{id}.csv");
         }
+
 
         [HttpGet]
         public async Task<IActionResult> ExportUrgencyCsv(int id)

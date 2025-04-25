@@ -1,48 +1,50 @@
+using Microsoft.Extensions.DependencyInjection;
 using QuickCareSim.Application.Interfaces.Repositories;
 using QuickCareSim.Application.Interfaces.Services.Executors;
 using QuickCareSim.Application.ViewModels.UrgencyRoom;
 using QuickCareSim.Domain.Entities;
 
-namespace QuickCareSim.Application.Services.Executors;
-
-public class SimulationRetryHandler : ISimulationRetryHandler
+namespace QuickCareSim.Application.Services.Executors
 {
-    
-    private readonly IGenericRepository<SimulationRun> _simulationRunRepository;
-    private readonly IParallelSimulationExecutor _parallelSimulationExecutor;
-    private readonly ISequentialSimulationExecutor _sequentialSimulationExecutor;
-
-    public SimulationRetryHandler(IGenericRepository<SimulationRun> simulationRunRepository, IParallelSimulationExecutor parallelSimulationExecutor, ISequentialSimulationExecutor sequentialSimulationExecutor)
+    public class SimulationRetryHandler : ISimulationRetryHandler
     {
-        _simulationRunRepository = simulationRunRepository;
-        _parallelSimulationExecutor = parallelSimulationExecutor;
-        _sequentialSimulationExecutor = sequentialSimulationExecutor;
-    }
-    
-    
-    public async Task RetryAsync(int simulationId, CancellationToken token)
-    {
-        var run = await _simulationRunRepository.GetByIdAsync(simulationId)
-            ?? throw new Exception("Simulacion no encontrada.");
+        private readonly IGenericRepository<SimulationRun> _simulationRepo;
+        private readonly IParallelSimulationExecutor _parallelExecutor;
+        private readonly ISequentialSimulationExecutor _sequentialExecutor;
 
-        var parameters = new SimulationParametersViewModel
+        public SimulationRetryHandler(
+            IGenericRepository<SimulationRun> simulationRepo,
+            IParallelSimulationExecutor parallelExecutor,
+            ISequentialSimulationExecutor sequentialExecutor)
         {
-            TotalPatients = run.TotalPatients,
-            Strategy = run.StrategyUsed,
-            ExecutionMode = run.ProcessorsUsed == 1 ? "Sequential" : "Parallel",
-            DoctorsToUse = run.TotalDoctors
-        };
+            _simulationRepo = simulationRepo;
+            _parallelExecutor = parallelExecutor;
+            _sequentialExecutor = sequentialExecutor;
+        }
 
-        run.RealExecutionTimeSeconds = 0;
-        run.RealExecutionTimeSeconds = 0;
-        run.TotalPatientsAttended = 0;
-        run.MetricsFinalized = false;
-        
-        await _simulationRunRepository.UpdateAsync(run);
-        
-        if(parameters.ExecutionMode == "Sequential")
-            await _sequentialSimulationExecutor.ExecuteReusingIdAsync(simulationId,parameters, token);
-        else
-            await _parallelSimulationExecutor.ExecuteReusingIdAsync(simulationId, parameters, token);
+        public async Task RetryAsync(int simulationId, CancellationToken token)
+        {
+            var run = await _simulationRepo.GetByIdAsync(simulationId)
+                      ?? throw new Exception("Simulacion no encontrada.");
+
+            var parameters = new SimulationParametersViewModel
+            {
+                TotalPatients = run.TotalPatients,
+                Strategy = run.StrategyUsed,
+                ExecutionMode = run.ProcessorsUsed == 1 ? "Sequential" : "Parallel",
+                DoctorsToUse = run.TotalDoctors
+            };
+
+            run.ExecutionTimeSeconds = 0;
+            run.RealExecutionTimeSeconds = 0;
+            run.TotalPatientsAttended = 0;
+            run.MetricsFinalized = false;
+            await _simulationRepo.UpdateAsync(run);
+
+            if (parameters.ExecutionMode == "Sequential")
+                await _sequentialExecutor.ExecuteReusingIdAsync(simulationId, parameters, token);
+            else
+                await _parallelExecutor.ExecuteReusingIdAsync(simulationId, parameters, token);
+        }
     }
 }
